@@ -1,13 +1,35 @@
-import React from "react";
-
+import React, { useState, useEffect } from "react";
 import "./App.css";
-
 import Products from "../components/Products";
+import Characteristics from "../components/Characteristics";
+
 
 const App = () => {
+  /*
   const handleAddToChar = (e, product) => {
-    console.table(e);
+    let charactalreadyclick =false;
+    Object.keys(characs).forEach( item => {
+      if( item.id === product.id){
+        charactalreadyclick=true; 
+      }
+      if(!charactalreadyclick){
+        e.push({...item, count:1});
+      }
+      localStorage.setCharacts("characts",JSON.stringify(characts));
+      return characts; 
+    })
   };
+
+
+handleRemoveFromCart(e,item){
+  setCharacts(
+   characts= characts.filter(elm => elm.id!== item.id);
+    localStorage.setCharacts('charact',characts);
+    return {characts};
+  );
+
+}
+*/
 
   return (
     <div className="  bg-secondary">
@@ -30,7 +52,10 @@ const App = () => {
       
         </div>
         <div className="col-md-6"></div>
-      </div>
+        
+      <Characteristics characts={setState(characts)} handleRemoveCharact={handleRemoveCharact} />    
+
+        </div>
     </div>
   );
 };
