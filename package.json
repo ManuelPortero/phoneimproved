@@ -6,14 +6,18 @@
   "scripts": {
     "start": "node src/index.js",
     "dev": "nodemon src/index.js",
-    "webpack": "webpack --mode development --watch"
+    "webpack": "webpack --mode development --watch",
+    "test": "jest"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@babel/preset-react": "^7.10.4",
+    "babel": "^6.23.0",
     "express": "^4.17.1",
     "fs": "0.0.1-security",
+    "jest": "^26.4.2",
     "morgan": "^1.10.0",
     "nodemon": "^2.0.4",
     "path": "^0.12.7",
@@ -22,7 +26,9 @@
     "react-dom": "^16.13.1"
   },
   "devDependencies": {
+    "@babel/preset-env": "^7.12.11",
     "babel-core": "^6.26.3",
+    "babel-env": "^2.4.1",
     "babel-loader": "^7.1.5",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",

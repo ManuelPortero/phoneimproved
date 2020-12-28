@@ -5,7 +5,7 @@ const { allowedNodeEnvironmentFlags } = require("process");
 const app = express(); 
 
 // Settings
-app.set('port', process.env.PORT || 3200); //asignamos el puerto
+app.set('port', process.env.PORT || 3000); //asignamos el puerto
 
 app.get('/phones', (req, res) => {
     fs.readFile('./phones.json', (err,json) => 

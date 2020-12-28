@@ -40,7 +40,14 @@
   }
 }
 
-.characteristic__container{
-    
+.BorderBox{
+  border: black solid 1px; 
+}
 
+.separator{
+  width:100px !important
+}
+
+hr{
+  margin-right:200px!important;
 }

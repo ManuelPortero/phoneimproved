@@ -1,27 +1,51 @@
 import React, { useState, useEffect } from "react";
 import "./Characteristics.css";
+import App from '../app/App';
 
 
-const Characteristics = (props) => {
-    const [Characts, setCharacts] = useState([]);
+const Characteristics = ({chars, removeChar, props}) => {
 
 return (
-    <div className="alert alert-success">
-        {characts.length === 0? " No selected products ": <div> You have {cartItems.length} products </div>}
-        {characts.length > 0 && 
-            <div>
+    
+    <div className="alert alert-success" >
+        
+        {chars.length === 0? " No selected products ": <div> You have {chars.length} products </div>}
+        {chars.length > 0 && 
+            <div className=" card bg-secondary">
+               
+               <div className="text-white mt-2 pt-2 pb-2">
+
                 <ul>
-                    {characts.map(item =>
-                        <li>
-                            <b>{item.title}</b>
-                                
-                            <button className="btn btn-success text-warning"
-                            onClick={(e) =>this.props.handleRemovecharact(e,item)}
+                    {chars.map(item =>
+                      
+                        <li key={chars.id}>
+                        <div>
+                        <button className="btn btn-success text-warning float-right mr-4"
+                            onClick={() => removeChar(item.id)}
+                            
                             >X</button>
+                           <p> <b>{item.name}</b> </p>
+                            <p> {item.manufacturer} </p>  
+                            <p className ="text-justify pr-4">{item.description} </p>
+                            <p> {item.color} </p>
+                            <p>{item.screen} </p>
+                            <p>{item.processor} </p>
+                            <p> {item.ram} </p>
+                           
+                                
+                            
+                            
+                        </div>    
+                        <hr className="ml-4" width="350px" />
                         </li>)}
+                        
+                        
                 </ul>
+             
             </div>
+         </div>
         }
+        
     </div>
     
 );

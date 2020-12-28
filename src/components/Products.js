@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from "react";
-import "./Products.css";
 const Products = (props) => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:3200/phones")
+    fetch("http://localhost:3000/phones")
       .then((res) => res.json())
       .then(({ phones }) => {
         setProducts(phones);
