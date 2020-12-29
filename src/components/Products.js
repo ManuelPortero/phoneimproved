@@ -33,7 +33,7 @@ const Products = (props) => {
               >
                 Characteristics{" "}
               </button>
-              <hr />
+              <hr className="bg-primary ml-3" width="180px" />
             </div>
           </div>
         </div>
