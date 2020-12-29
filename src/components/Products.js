@@ -14,7 +14,7 @@ const Products = (props) => {
     <div className="row">
       {products.map(product => (
         <div className="col-md-6 bg-info" key={product.id}>
-          <div className="container text-center pt-4">
+          <div className="container alert alert-success text-center mt-4 pt-4">
             <a
               href={`product.id`}
               onClick={() => props.handleAddToChar(product)}
@@ -33,7 +33,6 @@ const Products = (props) => {
               >
                 Characteristics{" "}
               </button>
-              <hr className="bg-primary ml-3" width="180px" />
             </div>
           </div>
         </div>

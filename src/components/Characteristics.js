@@ -7,7 +7,7 @@ const Characteristics = ({chars, removeChar, props}) => {
 
 return (
     
-    <div className="alert alert-success" >
+    <div className="alert alert-success center-text" >
         
         {chars.length === 0? " No selected products ": <div> You have {chars.length} products </div>}
         {chars.length > 0 && 
