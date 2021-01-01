@@ -25,12 +25,12 @@ return (
                             
                             >X</button>
                            <p> <b>{item.name}</b> </p>
-                            <p> {item.manufacturer} </p>  
-                            <p className ="text-justify pr-4">{item.description} </p>
-                            <p> {item.color} </p>
-                            <p>{item.screen} </p>
-                            <p>{item.processor} </p>
-                            <p> {item.ram} </p>
+                            <p>Manufacturer: {item.manufacturer} </p>  
+                            <p className ="text-justify pr-4"> Description: {item.description} </p>
+                            <p>Color: {item.color} </p>
+                            <p>Screen: {item.screen} </p>
+                            <p>Processor: {item.processor} </p>
+                            <p> Ram: {item.ram} </p>
                            
                                 
                             
